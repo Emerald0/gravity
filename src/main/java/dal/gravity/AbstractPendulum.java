@@ -1,5 +1,4 @@
 package dal.gravity;
-
 /**
  * Represents a pendulum
  */
@@ -20,6 +19,7 @@ public abstract class AbstractPendulum {
      * inTheta0: angular displacement at t=0 (0<=theta0)
      * inG: gravitational field value to use
      */
+    
     public AbstractPendulum (double inLength, double inMass, double inTheta0, double inG) {
     	if (validStringLength (inLength)) stringLength = inLength;
     	else throw new IllegalArgumentException ("invalid string length: " + inLength);
@@ -48,12 +48,7 @@ public abstract class AbstractPendulum {
     public double getStringLength () { return stringLength; }
 
     public double getGravitationalField () { return g; }
-    
-    public interface GravityModel {
-    	 public double getGravitationalField();
-    	 static double GracityConstant(){
-    		 return g;
-    	 }
-    }
+ 
+ 
 
 }
