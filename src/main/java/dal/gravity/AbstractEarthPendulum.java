@@ -16,7 +16,7 @@ public abstract class AbstractEarthPendulum extends AbstractPendulum {
      * inTheta0: angular displacement at t=0 (0<=theta0)
      */
     public AbstractEarthPendulum (double inLength, double inMass, double inTheta0) {
-	super (inLength, inMass, inTheta0, GRAVITY);
+    	super (inLength, inMass, inTheta0, GRAVITY);
     }
 
 }

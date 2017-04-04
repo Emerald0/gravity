@@ -21,15 +21,18 @@ public abstract class AbstractPendulum {
      * inG: gravitational field value to use
      */
     public AbstractPendulum (double inLength, double inMass, double inTheta0, double inG) {
-	if (validStringLength (inLength)) stringLength = inLength;
-	else throw new IllegalArgumentException ("invalid string length: " + inLength);
-	if (validPointMass(inMass)) pointMass = inMass;
-	else throw new IllegalArgumentException ("invalid point mass: " + inMass);
-	if (validDisplacement (inTheta0)) theta0 = inTheta0;
-	else throw new IllegalArgumentException 
+    	if (validStringLength (inLength)) stringLength = inLength;
+    	else throw new IllegalArgumentException ("invalid string length: " + inLength);
+    	
+    	if (validPointMass(inMass)) pointMass = inMass;
+    	else throw new IllegalArgumentException ("invalid point mass: " + inMass);
+    	
+    	if (validDisplacement (inTheta0)) theta0 = inTheta0;
+    	else throw new IllegalArgumentException 
 		 ("invalid angular displacement: " + inTheta0);
-	if (validGC (inG)) g = inG;
-	else throw new IllegalArgumentException ("invalid local gravitational field: " + inG);
+    	
+    	if (validGC (inG)) g = inG;
+    	else throw new IllegalArgumentException ("invalid local gravitational field: " + inG);
     }
 
     private boolean validDisplacement (double val) { return (val >= 0); }
